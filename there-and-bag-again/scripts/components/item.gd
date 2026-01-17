@@ -1,10 +1,13 @@
 class_name Item
 extends Node2D
 
-var item_shape = []
-var item_icon_path: String
+@export var sprite: Sprite2D
+@export var collider: CollisionShape2D
+var info: ItemInfo
 
 # Need a way to generate item from item infos
 func _ready() -> void:
+	sprite.texture = info.texture
+	collider.shape = info.collision_shape
 	# Load icon from path into
 	pass

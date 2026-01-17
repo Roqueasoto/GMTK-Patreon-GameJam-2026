@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://kjirbeq3drn3" path="res://scripts/components/item.gd" id="1_wos13"]
 [ext_resource type="Texture2D" uid="uid://c1v40o18q8bwv" path="res://assets/art/icon.svg" id="2_jadxl"]
 
-[node name="Item" type="Node2D"]
+[node name="Item" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "collider")]
 script = ExtResource("1_wos13")
+sprite = NodePath("Sprite2D")
+collider = NodePath("CollisionShape2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_jadxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

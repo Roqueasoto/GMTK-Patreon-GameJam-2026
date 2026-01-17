@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="There-And-Bag-Again"
+run/main_scene="uid://c4xor3mf3uauu"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://assets/art/icon.svg"
 

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4xor3mf3uauu"]
+
+[ext_resource type="PackedScene" uid="uid://cgkmxcmdvxs0r" path="res://scenes/components/items/egg.tscn" id="1_ym58h"]
+
+[node name="DevLevel" type="Node2D"]
+
+[node name="Item" parent="." instance=ExtResource("1_ym58h")]
+position = Vector2(436, 188)

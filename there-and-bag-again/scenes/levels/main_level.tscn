@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx2klpgdf7ied"]
+
+[ext_resource type="PackedScene" uid="uid://dny2460og623o" path="res://scenes/components/bag.tscn" id="1_ojqrr"]
+[ext_resource type="PackedScene" uid="uid://8otfilqbsk8r" path="res://scenes/components/adventure_view.tscn" id="2_fke1l"]
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="Bag" parent="." instance=ExtResource("1_ojqrr")]
+
+[node name="AdventureView" parent="." instance=ExtResource("2_fke1l")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

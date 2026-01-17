@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dny2460og623o"]
+
+[ext_resource type="Script" uid="uid://dqvil3rf07jw5" path="res://scripts/framework/bag.gd" id="1_dqf5m"]
+
+[node name="Bag" type="Node2D"]
+script = ExtResource("1_dqf5m")

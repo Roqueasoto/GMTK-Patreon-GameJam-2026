@@ -17,6 +17,7 @@ config/icon="res://assets/art/icon.svg"
 [autoload]
 
 Utils="*res://scripts/globals/utils.gd"
+ItemFactory="*res://scripts/framework/item_factory.gd"
 
 [display]
 
@@ -26,6 +27,14 @@ window/size/viewport_height=1080
 [dotnet]
 
 project/assembly_name="There-And-Bag-Again"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_resource_groups/plugin.cfg")
+
+[godot_resource_groups]
+
+auto_rebuild=true
 
 [gui]
 

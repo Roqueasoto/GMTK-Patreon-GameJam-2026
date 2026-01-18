@@ -1,8 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://8otfilqbsk8r"]
+[gd_scene load_steps=19 format=3 uid="uid://8otfilqbsk8r"]
 
 [ext_resource type="Script" uid="uid://u7v0orlpiqbc" path="res://scenes/components/adventure_view.gd" id="1_c0pdb"]
 [ext_resource type="Texture2D" uid="uid://crrau1rimhwm3" path="res://assets/art/placeholder/Tileset_2D Platformer.png" id="2_k35fs"]
-[ext_resource type="Texture2D" uid="uid://ds6wk8gltmu7c" path="res://assets/art/placeholder/parallax_field.png" id="3_y83pl"]
+[ext_resource type="Texture2D" uid="uid://b8odl6hproi81" path="res://assets/background/sky.png" id="3_iixse"]
+[ext_resource type="Texture2D" uid="uid://bwb2phnija60p" path="res://assets/background/cloudsgray.png" id="4_hcqpp"]
+[ext_resource type="Texture2D" uid="uid://pl80t3m8taj6" path="res://assets/background/cloudswhite.png" id="5_57jrr"]
+[ext_resource type="Texture2D" uid="uid://be50740b3ini" path="res://assets/background/mountains.png" id="5_hcqpp"]
+[ext_resource type="Texture2D" uid="uid://kk12x8mw1wsr" path="res://assets/background/fern1.png" id="7_fgs42"]
+[ext_resource type="Texture2D" uid="uid://cr6ub710bnt3w" path="res://assets/background/fern2.png" id="8_7byvs"]
+[ext_resource type="Texture2D" uid="uid://c1cj77e6iuufk" path="res://assets/background/fern3.png" id="9_vw1r8"]
+[ext_resource type="Texture2D" uid="uid://dvbtu64pxa25b" path="res://assets/background/grass1.png" id="10_xgueu"]
+[ext_resource type="Texture2D" uid="uid://d3gpuxfdek7g4" path="res://assets/background/grass2.png" id="11_3oyin"]
+[ext_resource type="Texture2D" uid="uid://c4vd862lc26h" path="res://assets/background/grass3.png" id="12_fnemv"]
+[ext_resource type="Texture2D" uid="uid://ikvk3t7hrkdi" path="res://assets/background/palmtree1.png" id="13_gs7b3"]
+[ext_resource type="Texture2D" uid="uid://cofgjh3hs4duo" path="res://assets/background/palmtree2.png" id="14_88803"]
+[ext_resource type="Texture2D" uid="uid://bi8es6fx0e61r" path="res://assets/background/palmtree3.png" id="15_cdh2w"]
+[ext_resource type="Texture2D" uid="uid://coerd4wrnnynj" path="res://assets/background/palmtree4.png" id="16_j4f1q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y83pl"]
 texture = ExtResource("2_k35fs")
@@ -478,6 +491,148 @@ tile_set = SubResource("TileSet_5ahvt")
 [node name="Background" type="Node2D" parent="."]
 
 [node name="ParallaxSky" type="Parallax2D" parent="Background"]
+repeat_times = 2
 
-[node name="TextureRect" type="Sprite2D" parent="Background/ParallaxSky"]
-texture = ExtResource("3_y83pl")
+[node name="SkyTexture" type="TextureRect" parent="Background/ParallaxSky"]
+scale = Vector2(0.40984854, 0.4098485)
+texture = ExtResource("3_iixse")
+
+[node name="ParallaxFarCloud" type="Parallax2D" parent="Background"]
+repeat_times = 2
+
+[node name="FarClouds" type="Sprite2D" parent="Background/ParallaxFarCloud"]
+position = Vector2(0, 50)
+scale = Vector2(0.41655362, 0.41655362)
+texture = ExtResource("4_hcqpp")
+centered = false
+
+[node name="ParallaxMountains" type="Parallax2D" parent="Background"]
+repeat_times = 2
+
+[node name="Mountains" type="Sprite2D" parent="Background/ParallaxMountains"]
+position = Vector2(-16, 165)
+scale = Vector2(0.41260597, 0.4126059)
+texture = ExtResource("5_hcqpp")
+centered = false
+
+[node name="ParallaxNearCloud" type="Parallax2D" parent="Background"]
+repeat_times = 2
+
+[node name="NearClouds" type="Sprite2D" parent="Background/ParallaxNearCloud"]
+position = Vector2(0, 20)
+scale = Vector2(0.45050764, 0.45050764)
+texture = ExtResource("5_57jrr")
+centered = false
+
+[node name="ParallaxTrees" type="Parallax2D" parent="Background"]
+repeat_times = 2
+
+[node name="Forest" type="Node2D" parent="Background/ParallaxTrees"]
+position = Vector2(0, -100)
+
+[node name="Fern1" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(622, 771)
+scale = Vector2(0.36904764, 0.3690476)
+texture = ExtResource("7_fgs42")
+centered = false
+
+[node name="Fern5" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(2342, 770)
+scale = Vector2(0.36904764, 0.3690476)
+texture = ExtResource("7_fgs42")
+centered = false
+
+[node name="Fern2" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(195.00002, 808)
+scale = Vector2(0.29960302, 0.29960307)
+texture = ExtResource("8_7byvs")
+centered = false
+
+[node name="Fern3" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(1617.0001, 817)
+scale = Vector2(0.27976194, 0.2797619)
+texture = ExtResource("9_vw1r8")
+centered = false
+
+[node name="Fern6" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(1306, 810.00006)
+scale = Vector2(0.27976194, 0.2797619)
+texture = ExtResource("9_vw1r8")
+centered = false
+
+[node name="Fern4" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(2026, 816.00006)
+scale = Vector2(0.27976194, 0.2797619)
+texture = ExtResource("9_vw1r8")
+centered = false
+
+[node name="Grass1" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(1436, 868)
+scale = Vector2(0.15065914, 0.15065913)
+texture = ExtResource("10_xgueu")
+centered = false
+
+[node name="Grass2" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(1029, 831)
+scale = Vector2(0.3333332, 0.23310177)
+texture = ExtResource("11_3oyin")
+centered = false
+
+[node name="Grass4" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(16, 826)
+scale = Vector2(0.3333332, 0.23310177)
+texture = ExtResource("11_3oyin")
+centered = false
+
+[node name="Grass3" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(397.99994, 903.0001)
+scale = Vector2(0.34437087, 0.34437087)
+texture = ExtResource("12_fnemv")
+centered = false
+
+[node name="Grass5" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(1784, 898.99994)
+scale = Vector2(0.34437087, 0.34437087)
+texture = ExtResource("12_fnemv")
+centered = false
+
+[node name="PalmTree1" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(1136, 582)
+scale = Vector2(0.30249473, 0.3024948)
+texture = ExtResource("13_gs7b3")
+centered = false
+
+[node name="PalmTree2" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(1841.9999, 579.99994)
+scale = Vector2(0.5226537, 0.5226537)
+texture = ExtResource("14_88803")
+centered = false
+
+[node name="PalmTree3" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(829, 441.99997)
+scale = Vector2(0.394822, 0.39482203)
+texture = ExtResource("15_cdh2w")
+centered = false
+
+[node name="PalmTree5" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(2138, 438)
+scale = Vector2(0.394822, 0.39482203)
+texture = ExtResource("15_cdh2w")
+centered = false
+
+[node name="PalmTree4" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
+position = Vector2(-2, 355.00003)
+scale = Vector2(0.5634029, 0.5634029)
+texture = ExtResource("16_j4f1q")
+centered = false
+
+[node name="ParallaxFloor" type="Parallax2D" parent="Background"]
+repeat_times = 2
+
+[node name="Ground" type="ColorRect" parent="Background/ParallaxFloor"]
+custom_minimum_size = Vector2(1080, 0)
+offset_left = -3.0
+offset_top = 851.0
+offset_right = 2723.0
+offset_bottom = 1089.0
+color = Color(0.69109493, 0.5221515, 0.31634653, 1)

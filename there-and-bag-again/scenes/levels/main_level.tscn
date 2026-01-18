@@ -5,8 +5,11 @@
 
 [node name="MainLevel" type="Node2D"]
 
-[node name="Bag" parent="." instance=ExtResource("1_ojqrr")]
-
 [node name="AdventureView" parent="." instance=ExtResource("2_fke1l")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Bag" parent="CanvasLayer" instance=ExtResource("1_ojqrr")]

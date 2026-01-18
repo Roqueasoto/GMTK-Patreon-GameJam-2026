@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dny2460og623o"]
+[gd_scene load_steps=3 format=3 uid="uid://dny2460og623o"]
 
 [ext_resource type="Script" uid="uid://dqvil3rf07jw5" path="res://scripts/components/bag.gd" id="1_dqf5m"]
+[ext_resource type="Texture2D" uid="uid://c1v40o18q8bwv" path="res://assets/art/icon.svg" id="2_1ab20"]
 
-[node name="Bag" type="Node2D"]
+[node name="Bag" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_dqf5m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 900.0
+offset_bottom = 1080.0
+texture = ExtResource("2_1ab20")

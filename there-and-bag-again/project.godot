@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="There-And-Bag-Again"
-run/main_scene="uid://c4xor3mf3uauu"
+run/main_scene="uid://dx2klpgdf7ied"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://assets/art/icon.svg"
 
 [autoload]
 
 Utils="*res://scripts/globals/utils.gd"
-ItemFactory="*res://scripts/framework/item_factory.gd"
 
 [display]
 

@@ -1,5 +1,5 @@
 class_name Bag
-extends Node2D
+extends Control
 
 @export var bag_size: Vector2i = Vector2i(8,8)
 var inventory_grid: Array = []

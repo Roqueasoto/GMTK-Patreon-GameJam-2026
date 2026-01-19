@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgkmxcmdvxs0r"]
+
+[ext_resource type="PackedScene" uid="uid://b8wnv68sjguwt" path="res://scenes/components/items/item_template.tscn" id="1_4n8j6"]
+[ext_resource type="Texture2D" uid="uid://deg2imxuu16t" path="res://assets/art/potion.png" id="2_djedu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfck5"]
+
+[node name="Item" instance=ExtResource("1_4n8j6")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-1, 0)
+texture = ExtResource("2_djedu")
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(100, 100)
+shape = SubResource("RectangleShape2D_cfck5")

@@ -18,6 +18,7 @@ config/icon="res://assets/art/icon.svg"
 [autoload]
 
 Utils="*res://scripts/globals/utils.gd"
+ItemFactory="*res://scripts/framework/item_factory.gd"
 
 [display]
 
@@ -30,7 +31,7 @@ project/assembly_name="There-And-Bag-Again"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_resource_groups/plugin.cfg")
+enabled=PackedStringArray("res://addons/gridplugin/plugin.cfg")
 
 [godot_resource_groups]
 

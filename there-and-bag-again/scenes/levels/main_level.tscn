@@ -1,40 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dx2klpgdf7ied"]
+[gd_scene load_steps=5 format=3 uid="uid://dx2klpgdf7ied"]
 
 [ext_resource type="PackedScene" uid="uid://dny2460og623o" path="res://scenes/components/bag.tscn" id="1_ojqrr"]
 [ext_resource type="PackedScene" uid="uid://8otfilqbsk8r" path="res://scenes/components/adventure_view.tscn" id="2_fke1l"]
 [ext_resource type="Script" uid="uid://btjnm521ulu74" path="res://scripts/framework/camera_2d.gd" id="2_hn3as"]
-[ext_resource type="Texture2D" uid="uid://cxphp1mausg68" path="res://assets/character/run1.png" id="4_kwk8y"]
-[ext_resource type="Texture2D" uid="uid://pcrys6fpwc1g" path="res://assets/character/run2.png" id="5_c7w6w"]
-[ext_resource type="Texture2D" uid="uid://cepn5kohye8fu" path="res://assets/character/run3.png" id="6_erkku"]
-[ext_resource type="Texture2D" uid="uid://bj3ooiaq88e13" path="res://assets/character/run4.png" id="7_63vgv"]
-[ext_resource type="Texture2D" uid="uid://dmvqe5mmi6c0u" path="res://assets/character/run5.png" id="8_g2oho"]
-[ext_resource type="Texture2D" uid="uid://bbm0bmw5r8d8a" path="res://assets/character/run6.png" id="9_c0gn3"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pmkt5"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_kwk8y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_c7w6w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_erkku")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_63vgv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_g2oho")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_c0gn3")
-}],
-"loop": true,
-"name": &"default",
-"speed": 12.0
-}]
+[ext_resource type="PackedScene" uid="uid://bm2h7614sik6y" path="res://scenes/components/character.tscn" id="4_hn3as"]
 
 [node name="MainLevel" type="Node2D"]
 
@@ -48,16 +17,5 @@ script = ExtResource("2_hn3as")
 
 [node name="Bag" parent="CanvasLayer" instance=ExtResource("1_ojqrr")]
 
-[node name="Character" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchor_right = 0.010000001
-anchor_bottom = 0.019000001
-offset_right = 20.8
-offset_bottom = 19.48
-
-[node name="PlayerAnimation" type="AnimatedSprite2D" parent="CanvasLayer/Character"]
-position = Vector2(1006.375, 866.81824)
-scale = Vector2(0.636978, 0.63697803)
-sprite_frames = SubResource("SpriteFrames_pmkt5")
-autoplay = "default"
-frame_progress = 0.61005145
+[node name="Character" parent="CanvasLayer" instance=ExtResource("4_hn3as")]
+position = Vector2(1006.375, 866.818)

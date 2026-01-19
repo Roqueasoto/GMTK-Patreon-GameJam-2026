@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dx2klpgdf7ied"]
+[gd_scene load_steps=12 format=3 uid="uid://dx2klpgdf7ied"]
 
 [ext_resource type="PackedScene" uid="uid://dny2460og623o" path="res://scenes/components/bag.tscn" id="1_ojqrr"]
 [ext_resource type="PackedScene" uid="uid://8otfilqbsk8r" path="res://scenes/components/adventure_view.tscn" id="2_fke1l"]
 [ext_resource type="Script" uid="uid://btjnm521ulu74" path="res://scripts/framework/camera_2d.gd" id="2_hn3as"]
+[ext_resource type="PackedScene" uid="uid://bwg388fv8ngkm" path="res://scenes/components/board.tscn" id="4_c7w6w"]
 [ext_resource type="Texture2D" uid="uid://cxphp1mausg68" path="res://assets/character/run1.png" id="4_kwk8y"]
 [ext_resource type="Texture2D" uid="uid://pcrys6fpwc1g" path="res://assets/character/run2.png" id="5_c7w6w"]
 [ext_resource type="Texture2D" uid="uid://cepn5kohye8fu" path="res://assets/character/run3.png" id="6_erkku"]
@@ -47,6 +48,8 @@ script = ExtResource("2_hn3as")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Bag" parent="CanvasLayer" instance=ExtResource("1_ojqrr")]
+
+[node name="Board" parent="CanvasLayer/Bag" instance=ExtResource("4_c7w6w")]
 
 [node name="Character" type="Control" parent="CanvasLayer"]
 layout_mode = 3

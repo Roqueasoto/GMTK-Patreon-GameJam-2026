@@ -18,7 +18,6 @@ config/icon="res://assets/art/icon.svg"
 [autoload]
 
 Utils="*res://scripts/globals/utils.gd"
-ItemFactory="*res://scripts/framework/item_factory.gd"
 
 [display]
 

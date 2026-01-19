@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dny2460og623o"]
 
-[ext_resource type="Script" uid="uid://dqvil3rf07jw5" path="res://scripts/components/bag.gd" id="1_dqf5m"]
+[ext_resource type="Script" uid="uid://1xubfvcmv8e6" path="res://scripts/components/bag.gd" id="1_dqf5m"]
 [ext_resource type="Texture2D" uid="uid://dhijqkx3g4gs4" path="res://assets/art/backpack.png" id="2_1ab20"]
 
 [node name="Bag" type="Control"]

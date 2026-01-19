@@ -24,7 +24,7 @@ script = ExtResource("1_c0pdb")
 script = ExtResource("2_7byvs")
 
 [node name="ParallaxSky" type="Parallax2D" parent="Background"]
-repeat_size = Vector2(1080, 0)
+scroll_scale = Vector2(0.1, 0.1)
 repeat_times = 2
 
 [node name="SkyTexture" type="TextureRect" parent="Background/ParallaxSky"]
@@ -32,7 +32,7 @@ scale = Vector2(0.40984854, 0.4098485)
 texture = ExtResource("3_iixse")
 
 [node name="ParallaxFarCloud" type="Parallax2D" parent="Background"]
-repeat_size = Vector2(1080, 0)
+scroll_scale = Vector2(0.15, 0.15)
 repeat_times = 2
 
 [node name="FarClouds" type="Sprite2D" parent="Background/ParallaxFarCloud"]
@@ -42,7 +42,7 @@ texture = ExtResource("4_hcqpp")
 centered = false
 
 [node name="ParallaxMountains" type="Parallax2D" parent="Background"]
-repeat_size = Vector2(1080, 0)
+scroll_scale = Vector2(0.2, 0.2)
 repeat_times = 2
 
 [node name="Mountains" type="Sprite2D" parent="Background/ParallaxMountains"]
@@ -52,7 +52,7 @@ texture = ExtResource("5_hcqpp")
 centered = false
 
 [node name="ParallaxNearCloud" type="Parallax2D" parent="Background"]
-repeat_size = Vector2(1080, 0)
+scroll_scale = Vector2(0.3, 0.3)
 repeat_times = 2
 
 [node name="NearClouds" type="Sprite2D" parent="Background/ParallaxNearCloud"]
@@ -62,7 +62,7 @@ texture = ExtResource("5_57jrr")
 centered = false
 
 [node name="ParallaxTrees" type="Parallax2D" parent="Background"]
-repeat_size = Vector2(1080, 0)
+scroll_scale = Vector2(0.6, 0.6)
 repeat_times = 2
 
 [node name="Forest" type="Node2D" parent="Background/ParallaxTrees"]
@@ -165,7 +165,6 @@ texture = ExtResource("16_j4f1q")
 centered = false
 
 [node name="ParallaxFloor" type="Parallax2D" parent="Background"]
-repeat_size = Vector2(1080, 0)
 repeat_times = 2
 
 [node name="Ground" type="ColorRect" parent="Background/ParallaxFloor"]

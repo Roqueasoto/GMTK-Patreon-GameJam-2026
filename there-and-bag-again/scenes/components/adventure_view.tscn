@@ -36,7 +36,7 @@ scroll_scale = Vector2(0.15, 0.15)
 repeat_times = 2
 
 [node name="FarClouds" type="Sprite2D" parent="Background/ParallaxFarCloud"]
-position = Vector2(0, 50)
+position = Vector2(0, 10)
 scale = Vector2(0.41655362, 0.41655362)
 texture = ExtResource("4_hcqpp")
 centered = false
@@ -46,7 +46,7 @@ scroll_scale = Vector2(0.2, 0.2)
 repeat_times = 2
 
 [node name="Mountains" type="Sprite2D" parent="Background/ParallaxMountains"]
-position = Vector2(-16, 165)
+position = Vector2(-16, 40)
 scale = Vector2(0.41260597, 0.4126059)
 texture = ExtResource("5_hcqpp")
 centered = false
@@ -56,7 +56,6 @@ scroll_scale = Vector2(0.3, 0.3)
 repeat_times = 2
 
 [node name="NearClouds" type="Sprite2D" parent="Background/ParallaxNearCloud"]
-position = Vector2(0, 20)
 scale = Vector2(0.45050764, 0.45050764)
 texture = ExtResource("5_57jrr")
 centered = false
@@ -66,7 +65,7 @@ scroll_scale = Vector2(0.6, 0.6)
 repeat_times = 2
 
 [node name="Forest" type="Node2D" parent="Background/ParallaxTrees"]
-position = Vector2(0, -100)
+position = Vector2(0, -300)
 
 [node name="Fern1" type="Sprite2D" parent="Background/ParallaxTrees/Forest"]
 position = Vector2(622, 771)
@@ -170,7 +169,7 @@ repeat_times = 2
 [node name="Ground" type="ColorRect" parent="Background/ParallaxFloor"]
 custom_minimum_size = Vector2(1080, 0)
 offset_left = -3.0
-offset_top = 851.0
+offset_top = 649.0
 offset_right = 2723.0
 offset_bottom = 1089.0
 color = Color(0.69109493, 0.5221515, 0.31634653, 1)

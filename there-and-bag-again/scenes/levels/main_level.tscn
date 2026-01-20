@@ -1,24 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dx2klpgdf7ied"]
+[gd_scene load_steps=4 format=3 uid="uid://dx2klpgdf7ied"]
 
 [ext_resource type="PackedScene" uid="uid://dny2460og623o" path="res://scenes/components/bag.tscn" id="1_ojqrr"]
 [ext_resource type="PackedScene" uid="uid://8otfilqbsk8r" path="res://scenes/components/adventure_view.tscn" id="2_fke1l"]
-[ext_resource type="Script" uid="uid://btjnm521ulu74" path="res://scripts/framework/camera_2d.gd" id="2_hn3as"]
 [ext_resource type="PackedScene" uid="uid://bwg388fv8ngkm" path="res://scenes/components/board.tscn" id="4_c7w6w"]
-[ext_resource type="PackedScene" uid="uid://bm2h7614sik6y" path="res://scenes/components/character.tscn" id="5_geiq8"]
 
 [node name="MainLevel" type="Node2D"]
 
 [node name="AdventureView" parent="." instance=ExtResource("2_fke1l")]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
-script = ExtResource("2_hn3as")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Bag" parent="CanvasLayer" instance=ExtResource("1_ojqrr")]
 
 [node name="Board" parent="CanvasLayer/Bag" instance=ExtResource("4_c7w6w")]
-
-[node name="Character" parent="CanvasLayer" instance=ExtResource("5_geiq8")]
-position = Vector2(1006.375, 866.818)

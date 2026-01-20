@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://8otfilqbsk8r"]
+[gd_scene load_steps=19 format=3 uid="uid://8otfilqbsk8r"]
 
 [ext_resource type="Script" uid="uid://u7v0orlpiqbc" path="res://scripts/framework/adventure_view.gd" id="1_c0pdb"]
-[ext_resource type="Script" uid="uid://cconxjkge7u7m" path="res://scenes/components/background.gd" id="2_7byvs"]
+[ext_resource type="Script" path="res://scenes/components/background.gd" id="2_7byvs"]
 [ext_resource type="Texture2D" uid="uid://b8odl6hproi81" path="res://assets/background/sky.png" id="3_iixse"]
 [ext_resource type="Texture2D" uid="uid://bwb2phnija60p" path="res://assets/background/cloudsgray.png" id="4_hcqpp"]
 [ext_resource type="Texture2D" uid="uid://pl80t3m8taj6" path="res://assets/background/cloudswhite.png" id="5_57jrr"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://cofgjh3hs4duo" path="res://assets/background/palmtree2.png" id="14_88803"]
 [ext_resource type="Texture2D" uid="uid://bi8es6fx0e61r" path="res://assets/background/palmtree3.png" id="15_cdh2w"]
 [ext_resource type="Texture2D" uid="uid://coerd4wrnnynj" path="res://assets/background/palmtree4.png" id="16_j4f1q"]
+[ext_resource type="PackedScene" uid="uid://bm2h7614sik6y" path="res://scenes/components/character.tscn" id="17_vw1r8"]
+[ext_resource type="Script" uid="uid://btjnm521ulu74" path="res://scripts/framework/character.gd" id="18_xgueu"]
 
 [node name="AdventureView" type="Node2D"]
 script = ExtResource("1_c0pdb")
@@ -173,3 +175,11 @@ offset_top = 649.0
 offset_right = 2723.0
 offset_bottom = 1089.0
 color = Color(0.69109493, 0.5221515, 0.31634653, 1)
+
+[node name="Character" parent="." instance=ExtResource("17_vw1r8")]
+position = Vector2(1006.375, 866.818)
+script = ExtResource("18_xgueu")
+
+[node name="Camera2D" type="Camera2D" parent="Character"]
+position = Vector2(-1006.375, -866.818)
+anchor_mode = 0

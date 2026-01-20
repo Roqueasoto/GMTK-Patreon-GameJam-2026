@@ -32,6 +32,10 @@ project/assembly_name="There-And-Bag-Again"
 
 enabled=PackedStringArray("res://addons/gridplugin/plugin.cfg")
 
+[global_group]
+
+"Game Events"=""
+
 [godot_resource_groups]
 
 auto_rebuild=true

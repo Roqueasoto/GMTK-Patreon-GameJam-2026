@@ -1,0 +1,45 @@
+{
+  "column_properties": {
+    "res://resources/event_data/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0
+      },
+      "resource_name": {
+        "visibility": 0
+      }
+    },
+    "res://resources/item_data/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0
+      },
+      "resource_name": {
+        "visibility": 0
+      }
+    },
+    "res://resources/levels/": {
+      "metadata/_custom_type_script": {
+        "visibility": 0
+      },
+      "resource_local_to_scene": {
+        "visibility": 0
+      },
+      "resource_name": {
+        "visibility": 0
+      }
+    }
+  },
+  "recent_paths": [
+    "res://resources/event_data/",
+    "res://resources/item_data/",
+    "res://resources/levels/"
+  ],
+  "table_functions": {
+
+  }
+}

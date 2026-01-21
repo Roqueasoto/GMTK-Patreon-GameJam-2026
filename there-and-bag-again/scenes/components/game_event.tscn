@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bek1vruybglwt"]
 
-[ext_resource type="Script" uid="uid://ex1gxe4sy8cr" path="res://scripts/game_event.gd" id="1_bhdmt"]
+[ext_resource type="Script" uid="uid://ex1gxe4sy8cr" path="res://scripts/components/game_event.gd" id="1_bhdmt"]
 [ext_resource type="Texture2D" uid="uid://ddpf5ldwaojcn" path="res://assets/items/potionred.png" id="2_8chr4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wxu18"]

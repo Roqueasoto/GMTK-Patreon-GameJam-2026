@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3 uid="uid://cn7fu2f36wl3a"]
+
+[ext_resource type="Script" uid="uid://b0vi4h20walas" path="res://addons/godot_resource_groups/resource_group.gd" id="1_ieppp"]
+
+[resource]
+script = ExtResource("1_ieppp")
+base_folder = "res://resources/levels"
+includes = Array[String](["*.tres"])
+paths = Array[String](["res://resources/levels/level_one_data.tres"])
+metadata/_custom_type_script = "uid://b0vi4h20walas"

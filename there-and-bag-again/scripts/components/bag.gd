@@ -3,8 +3,8 @@ extends Control
 
 # Preload resources to use for both spawning and the registry
 const ITEM_SCENE = preload("res://scenes/components/items/item.tscn")
-const BANANA = preload("res://scenes/components/items/item_data/banana.tres")
-const POTION = preload("res://scenes/components/items/item_data/potion.tres")
+const BANANA = preload("res://resources/item_data/banana.tres")
+const POTION = preload("res://resources/item_data/potion.tres")
 
 # Use 'Board' type now that class_name is added to Board.gd
 @onready var board: Board = $Board

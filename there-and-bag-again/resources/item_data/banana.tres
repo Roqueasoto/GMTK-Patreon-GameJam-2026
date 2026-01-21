@@ -1,12 +1,13 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dh1bdl0lffdnw"]
 
-[ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/item_data.gd" id="1_43une"]
-[ext_resource type="Texture2D" uid="uid://1o71wkwohcyd" path="res://assets/art/banana.png" id="2_43kpo"]
+[ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_1rd06"]
+[ext_resource type="Texture2D" uid="uid://1o71wkwohcyd" path="res://assets/art/banana.png" id="2_0f86q"]
 
 [resource]
-script = ExtResource("1_43une")
+script = ExtResource("1_1rd06")
+id = "banana"
 display_name = "Banana"
-texture = ExtResource("2_43kpo")
+texture = ExtResource("2_0f86q")
 grid_size = Vector2i(3, 3)
 cells = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2)])
 metadata/_custom_type_script = "uid://mt2yymrxspbd"

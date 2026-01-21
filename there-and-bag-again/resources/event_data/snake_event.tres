@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://d6x1g3j7fl2t"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_k1gme"]
+[ext_resource type="Texture2D" uid="uid://cqo52byujy3gj" path="res://assets/obstacles/snakeidle.png" id="2_vb6f7"]
+
+[resource]
+script = ExtResource("1_k1gme")
+id = "snake"
+texture = ExtResource("2_vb6f7")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

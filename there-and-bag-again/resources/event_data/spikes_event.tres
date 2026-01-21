@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://b1asa6gbdeuf2"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_t6cuj"]
+[ext_resource type="Texture2D" uid="uid://sv2bk27dlnxh" path="res://assets/obstacles/spikes.png" id="2_yhuja"]
+
+[resource]
+script = ExtResource("1_t6cuj")
+id = "spikes"
+texture = ExtResource("2_yhuja")
+type = 1
+damage = 5.0
+metadata/_custom_type_script = "uid://df03fvm34anpa"

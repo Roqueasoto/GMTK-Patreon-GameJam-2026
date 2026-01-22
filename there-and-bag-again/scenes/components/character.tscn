@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bm2h7614sik6y"]
+[gd_scene load_steps=13 format=3 uid="uid://bm2h7614sik6y"]
 
 [ext_resource type="Texture2D" uid="uid://cxphp1mausg68" path="res://assets/character/run1.png" id="1_57ejb"]
+[ext_resource type="Script" uid="uid://btjnm521ulu74" path="res://scripts/framework/character.gd" id="1_c8i2n"]
 [ext_resource type="Texture2D" uid="uid://pcrys6fpwc1g" path="res://assets/character/run2.png" id="2_c8i2n"]
 [ext_resource type="Texture2D" uid="uid://cepn5kohye8fu" path="res://assets/character/run3.png" id="3_u2aqm"]
 [ext_resource type="Texture2D" uid="uid://bj3ooiaq88e13" path="res://assets/character/run4.png" id="4_ajkhv"]
 [ext_resource type="Texture2D" uid="uid://dmvqe5mmi6c0u" path="res://assets/character/run5.png" id="5_ngqvs"]
 [ext_resource type="Texture2D" uid="uid://bbm0bmw5r8d8a" path="res://assets/character/run6.png" id="6_7pm48"]
+[ext_resource type="Script" uid="uid://b7x3wsah628fk" path="res://scripts/components/resource_bar.gd" id="8_u2aqm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pmkt5"]
 animations = [{
@@ -37,7 +39,14 @@ animations = [{
 radius = 137.625
 height = 412.364
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngqvs"]
+bg_color = Color(0.9149625, 0.58777595, 0.25800782, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pm48"]
+bg_color = Color(0.6831611, 0.13173455, 0.16479102, 1)
+
 [node name="Character" type="Node2D"]
+script = ExtResource("1_c8i2n")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.636978, 0.63697803)
@@ -51,3 +60,24 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CapsuleShape2D_57ejb")
+
+[node name="StaminaBar" type="ProgressBar" parent="." groups=["Stamina"]]
+offset_left = -125.0
+offset_top = -280.0
+offset_right = 125.0
+offset_bottom = -253.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_ngqvs")
+value = 100.0
+script = ExtResource("8_u2aqm")
+
+[node name="HealthBar" type="ProgressBar" parent="." groups=["Health"]]
+offset_left = -125.0
+offset_top = -240.0
+offset_right = 125.0
+offset_bottom = -213.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_7pm48")
+value = 100.0
+script = ExtResource("8_u2aqm")
+
+[connection signal="bar_is_empty" from="StaminaBar" to="." method="_on_stamina_bar_bar_is_empty"]
+[connection signal="bar_is_empty" from="HealthBar" to="." method="_on_health_bar_bar_is_empty"]

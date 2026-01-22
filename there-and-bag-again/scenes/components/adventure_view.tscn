@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://8otfilqbsk8r"]
+[gd_scene load_steps=19 format=3 uid="uid://8otfilqbsk8r"]
 
 [ext_resource type="Script" uid="uid://u7v0orlpiqbc" path="res://scripts/framework/adventure_view.gd" id="1_c0pdb"]
 [ext_resource type="Script" uid="uid://cconxjkge7u7m" path="res://scripts/framework/background.gd" id="2_7byvs"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://bi8es6fx0e61r" path="res://assets/background/palmtree3.png" id="15_cdh2w"]
 [ext_resource type="Texture2D" uid="uid://coerd4wrnnynj" path="res://assets/background/palmtree4.png" id="16_j4f1q"]
 [ext_resource type="PackedScene" uid="uid://bm2h7614sik6y" path="res://scenes/components/character.tscn" id="17_vw1r8"]
-[ext_resource type="Script" uid="uid://btjnm521ulu74" path="res://scripts/framework/character.gd" id="18_xgueu"]
 [ext_resource type="Script" uid="uid://b4umlboccb01d" path="res://scripts/components/spawner.gd" id="19_3oyin"]
 
 [node name="AdventureView" type="Node2D"]
@@ -179,7 +178,6 @@ color = Color(0.69109493, 0.5221515, 0.31634653, 1)
 
 [node name="Character" parent="." instance=ExtResource("17_vw1r8")]
 position = Vector2(1000, 875)
-script = ExtResource("18_xgueu")
 
 [node name="Camera2D" type="Camera2D" parent="Character"]
 position = Vector2(-1006.375, -866.818)
@@ -196,4 +194,5 @@ container = NodePath("Container")
 wait_time = 0.5
 autostart = true
 
+[connection signal="timeout" from="Character/Spawner/Timer" to="Character" method="_on_timer_timeout"]
 [connection signal="timeout" from="Character/Spawner/Timer" to="Character/Spawner" method="_on_timer_timeout"]

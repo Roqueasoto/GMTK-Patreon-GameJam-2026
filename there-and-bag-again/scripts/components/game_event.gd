@@ -20,7 +20,7 @@ func move_self() -> void:
 	var new_pos = Vector2(self.position.x - displacement, self.position.y)
 	var tween := create_tween()
 	tween.set_trans(Tween.TRANS_EXPO)
-	tween.tween_property(self, ^"position", new_pos, 0.5) # take two seconds to move
+	tween.tween_property(self, ^"position", new_pos, 0.5) # take half seconds to move
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	if not is_spacer:

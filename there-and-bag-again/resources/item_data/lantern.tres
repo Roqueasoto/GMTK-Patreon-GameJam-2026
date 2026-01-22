@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bwdbqr6aymyja"]
+
+[ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_gfl2n"]
+[ext_resource type="Texture2D" uid="uid://b3h5w6oxmyrlm" path="res://assets/items/lantern.png" id="2_gfl2n"]
+
+[resource]
+script = ExtResource("1_gfl2n")
+id = "goldbar"
+display_name = "Gold Bar"
+texture = ExtResource("2_gfl2n")
+grid_size = Vector2i(3, 3)
+cells = Array[Vector2i]([Vector2i(1, 1), Vector2i(0, 1), Vector2i(0, 2), Vector2i(1, 2), Vector2i(1, 0), Vector2i(2, 0), Vector2i(2, 1), Vector2i(2, 2), Vector2i(0, 0)])
+metadata/_custom_type_script = "uid://mt2yymrxspbd"

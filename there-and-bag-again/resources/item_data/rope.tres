@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://6ceum6w1o74t"]
+
+[ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_qe3tg"]
+[ext_resource type="Texture2D" uid="uid://cvjcvfykm5b8b" path="res://assets/items/rope.png" id="2_qe3tg"]
+
+[resource]
+script = ExtResource("1_qe3tg")
+id = "rope"
+display_name = "rope"
+texture = ExtResource("2_qe3tg")
+grid_size = Vector2i(3, 5)
+cells = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(0, 3), Vector2i(1, 4), Vector2i(1, 3), Vector2i(1, 2), Vector2i(2, 2), Vector2i(2, 3), Vector2i(2, 4), Vector2i(0, 4)])
+metadata/_custom_type_script = "uid://mt2yymrxspbd"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bikauatxgtkw1"]
+
+[ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_ch0e5"]
+[ext_resource type="Texture2D" uid="uid://dqf5p3bry8keh" path="res://assets/items/potionpurple.png" id="2_mmeyg"]
+
+[resource]
+script = ExtResource("1_ch0e5")
+id = "potionred"
+display_name = "Red Potion"
+texture = ExtResource("2_mmeyg")
+grid_size = Vector2i(3, 2)
+cells = Array[Vector2i]([Vector2i(1, 1), Vector2i(0, 1), Vector2i(2, 1), Vector2i(1, 0)])
+metadata/_custom_type_script = "uid://mt2yymrxspbd"

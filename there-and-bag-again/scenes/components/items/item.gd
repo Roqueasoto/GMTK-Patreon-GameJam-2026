@@ -1,5 +1,5 @@
 @tool
-class_name Item
+class_name ItemTool
 extends Node2D
 
 const TILE_SIZE := 100.0

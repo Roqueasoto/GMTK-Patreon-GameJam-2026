@@ -13,11 +13,21 @@ extends Node2D
 var grid_data := {} 
 var selected_item: Item = null
 
+# Audio Setup
+var audio_player := AudioStreamPlayer.new()
+
+var sfx_pickup = preload("res://assets/sound/click1.mp3")
+var sfx_putdown = preload("res://assets/sound/click2.mp3")
+
 func _enter_tree() -> void:
 	# This runs the moment the node enters the scene
-	add_to_group("Event Ocurred") # Matches your GameEvent typo exactly
+	add_to_group("Event Ocurred") 
 
 func _ready() -> void:
+	# Setup Main Click Player
+	audio_player.volume_db = -6.0 # Halve the volume (approx -6dB)
+	add_child(audio_player)
+	
 	print("BOARD IS READY AND LISTENING! (Group: 'Event Ocurred')")
 	
 	# Fallback if Inspector assignment was missed
@@ -75,8 +85,17 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
+				print("DEBUG: Mouse Down detected at %d ms" % Time.get_ticks_msec())
 				_attempt_grab(get_local_mouse_position())
 			elif selected_item:
+				print("DEBUG: Mouse Up (Drop) detected at %d ms" % Time.get_ticks_msec())
+				# Play drop sound
+				audio_player.stream = sfx_putdown
+				audio_player.pitch_scale = randf_range(0.95, 1.05)
+				
+				print("DEBUG: Triggering Putdown Audio at %d ms" % Time.get_ticks_msec())
+				audio_player.play()
+				
 				selected_item = null
 	elif event is InputEventMouseMotion and selected_item:
 		_handle_drag(get_local_mouse_position())
@@ -86,6 +105,14 @@ func _attempt_grab(local_mouse: Vector2) -> void:
 	if grid_data.has(cell):
 		selected_item = grid_data[cell]
 		selected_item.grab_offset = selected_item.position - local_mouse
+		
+		# Play pickup sound
+		audio_player.stream = sfx_pickup
+		audio_player.pitch_scale = randf_range(0.95, 1.05)
+		
+		print("DEBUG: Triggering Pickup Audio at %d ms" % Time.get_ticks_msec())
+		audio_player.play()
+		
 		get_viewport().set_input_as_handled()
 
 func _handle_drag(local_mouse: Vector2) -> void:

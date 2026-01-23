@@ -49,6 +49,7 @@ enabled=PackedStringArray("res://addons/godot_resource_groups/plugin.cfg", "res:
 [global_group]
 
 "Game Events"=""
+Player=""
 
 [godot_resource_groups]
 

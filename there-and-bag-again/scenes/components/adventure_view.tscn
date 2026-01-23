@@ -183,10 +183,11 @@ position = Vector2(1000, 875)
 position = Vector2(-1006.375, -866.818)
 anchor_mode = 0
 
-[node name="Spawner" type="Node2D" parent="Character" node_paths=PackedStringArray("container")]
+[node name="Spawner" type="Node2D" parent="Character" node_paths=PackedStringArray("container", "player")]
 position = Vector2(775, 0)
 script = ExtResource("19_3oyin")
 container = NodePath("Container")
+player = NodePath("..")
 
 [node name="Container" type="Node2D" parent="Character/Spawner"]
 

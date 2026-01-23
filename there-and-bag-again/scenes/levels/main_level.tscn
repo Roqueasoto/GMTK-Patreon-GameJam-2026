@@ -13,3 +13,6 @@
 [node name="Bag" parent="CanvasLayer" instance=ExtResource("1_ojqrr")]
 
 [node name="Board" parent="CanvasLayer/Bag" instance=ExtResource("4_c7w6w")]
+tile_size = 100
+grid_width = 8
+grid_height = 8

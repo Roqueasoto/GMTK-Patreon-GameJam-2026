@@ -1,7 +1,9 @@
+class_name Character
 extends Node2D
 
 @export var player_displacement = 6.0
 @export var stamina_drain = -5  # Negative implies stamina drain per tick
+@export var player_damage = 5   # barehanded, modified by items
 
 func _process(_delta) -> void:
 	_move_player()
@@ -25,3 +27,6 @@ func _on_stamina_bar_bar_is_empty(delta: float) -> void:
 
 func _on_health_bar_bar_is_empty(_delta: float) -> void:
 	print("Game Over")
+
+func get_player_damage() -> float:
+	return player_damage

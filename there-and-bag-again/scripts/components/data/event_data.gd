@@ -5,3 +5,4 @@ extends Resource
 @export var texture: Texture2D
 @export var type: Utils.event_type
 @export var damage: float           # Like Damage, Hunger, etc.
+@export var hp: float               # Enemy Hit points

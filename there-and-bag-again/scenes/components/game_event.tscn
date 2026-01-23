@@ -1,16 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bek1vruybglwt"]
+[gd_scene load_steps=5 format=3 uid="uid://bek1vruybglwt"]
 
 [ext_resource type="Script" uid="uid://ex1gxe4sy8cr" path="res://scripts/components/game_event.gd" id="1_bhdmt"]
 [ext_resource type="Texture2D" uid="uid://ddpf5ldwaojcn" path="res://assets/items/potionred.png" id="2_8chr4"]
+[ext_resource type="PackedScene" uid="uid://w6jkpeadkujr" path="res://scenes/components/health_bar.tscn" id="3_7s6yw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wxu18"]
 radius = 31.0
 height = 102.0
 
-[node name="GameEvent" type="Node2D" node_paths=PackedStringArray("sprite", "area") groups=["Game Events"]]
+[node name="GameEvent" type="Node2D" node_paths=PackedStringArray("sprite", "area", "health_bar") groups=["Game Events"]]
 script = ExtResource("1_bhdmt")
 sprite = NodePath("Sprite2D")
 area = NodePath("Area2D")
+health_bar = NodePath("HealthBar")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
@@ -21,5 +23,11 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_wxu18")
+
+[node name="HealthBar" parent="." instance=ExtResource("3_7s6yw")]
+offset_left = -123.0
+offset_top = -194.0
+offset_right = 127.0
+offset_bottom = -167.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

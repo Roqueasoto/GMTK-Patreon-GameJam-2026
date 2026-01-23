@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dmvqe5mmi6c0u" path="res://assets/character/run5.png" id="5_ngqvs"]
 [ext_resource type="Texture2D" uid="uid://bbm0bmw5r8d8a" path="res://assets/character/run6.png" id="6_7pm48"]
 [ext_resource type="Script" uid="uid://b7x3wsah628fk" path="res://scripts/components/resource_bar.gd" id="8_u2aqm"]
+[ext_resource type="PackedScene" uid="uid://w6jkpeadkujr" path="res://scenes/components/health_bar.tscn" id="9_ajkhv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pmkt5"]
 animations = [{
@@ -42,10 +43,7 @@ height = 412.364
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngqvs"]
 bg_color = Color(0.9149625, 0.58777595, 0.25800782, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pm48"]
-bg_color = Color(0.6831611, 0.13173455, 0.16479102, 1)
-
-[node name="Character" type="Node2D"]
+[node name="Character" type="Node2D" groups=["Player"]]
 script = ExtResource("1_c8i2n")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
@@ -70,14 +68,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ngqvs")
 value = 100.0
 script = ExtResource("8_u2aqm")
 
-[node name="HealthBar" type="ProgressBar" parent="." groups=["Health"]]
-offset_left = -125.0
-offset_top = -240.0
-offset_right = 125.0
-offset_bottom = -213.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_7pm48")
-value = 100.0
-script = ExtResource("8_u2aqm")
+[node name="HealthBar" parent="." groups=["Health"] instance=ExtResource("9_ajkhv")]
 
 [connection signal="bar_is_empty" from="StaminaBar" to="." method="_on_stamina_bar_bar_is_empty"]
 [connection signal="bar_is_empty" from="HealthBar" to="." method="_on_health_bar_bar_is_empty"]

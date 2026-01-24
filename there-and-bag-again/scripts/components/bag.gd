@@ -1,23 +1,33 @@
 class_name Bag
 extends Control
 
-# Preload resources to use for both spawning and the registry
 const ITEM_SCENE = preload("res://scenes/components/items/item.tscn")
-const BANANA = preload("res://resources/item_data/banana.tres")
-const POTION = preload("res://resources/item_data/potionred.tres")
+const ITEMS_PATH = "res://resources/item_data/"
 
-# Use 'Board' type now that class_name is added to Board.gd
 @onready var board: Board = $Board
 
 func _ready() -> void:
-	# Populate the registry so Board knows what "banana" means when GameEvent fires
-	board.item_registry["banana"] = BANANA
-	board.item_registry["potion"] = POTION
-	
+	_load_items_into_registry()
 	print("Bag Initialized. Registry: ", board.item_registry.keys())
 
+func _load_items_into_registry() -> void:
+	var dir = DirAccess.open(ITEMS_PATH)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		
+		while file_name != "":
+			if not dir.current_is_dir() and file_name.ends_with(".tres"):
+				var resource = load(ITEMS_PATH + file_name)
+				# Use the file name (without extension) as the registry key
+				var key = file_name.get_basename()
+				board.item_registry[key] = resource
+			
+			file_name = dir.get_next()
+	else:
+		push_error("Failed to access path: " + ITEMS_PATH)
+
 func _spawn(data: Resource, grid_pos: Vector2i) -> void:
-	# Manual spawn logic for setup
 	var item = ITEM_SCENE.instantiate()
 	item.data = data
 	board.place_item(item, grid_pos)

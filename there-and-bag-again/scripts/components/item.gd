@@ -4,7 +4,7 @@ extends Area2D
 
 signal clicked(item)
 
-const TILE_SIZE = 100.0
+var TILE_SIZE = Utils.TILE_SIZE
 
 @export var data: ItemData:
 	set(value):
@@ -38,6 +38,7 @@ func _input_event(_viewport, event, _shape_idx):
 		clicked.emit(self)
 
 func _apply_data() -> void:
+	
 	queue_redraw()
 	if not data: return
 	
@@ -54,8 +55,12 @@ func _apply_data() -> void:
 		sprite.offset = center_offset
 		
 		var max_grid_cells = max(data.grid_size.x, data.grid_size.y)
-		var factor = (max_grid_cells * TILE_SIZE) / max(data.texture.get_width(), data.texture.get_height())
-		scale = Vector2(factor, factor)
+
+		var max_dim = float(max(data.texture.get_width(), data.texture.get_height()))
+		if max_dim > 0:
+			var factor = (max_grid_cells * TILE_SIZE) / max_dim
+			self.scale = Vector2(factor, factor)
+
 
 		_rebuild_colliders()
 

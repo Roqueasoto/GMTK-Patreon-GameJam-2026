@@ -1,14 +1,13 @@
 class_name Board
 extends Node2D
 
-@export var tile_size := 100
-@export var grid_width := 8
-@export var grid_height := 8
+var tile_size := Utils.TILE_SIZE
+var grid_width := Utils.GRID_RESOLUTION
+var grid_height := Utils.GRID_RESOLUTION
 
-# Drag 'item.tscn' here in the Inspector!
-@export var item_scene: PackedScene 
+var item_scene: PackedScene 
 
-@export var item_registry: Dictionary = {} 
+var item_registry: Dictionary = {} 
 
 var grid_data := {} 
 var selected_item: Item = null
@@ -28,11 +27,7 @@ func _ready() -> void:
 	audio_player.volume_db = -6.0 # Halve the volume (approx -6dB)
 	add_child(audio_player)
 	
-	print("BOARD IS READY AND LISTENING! (Group: 'Event Ocurred')")
-	
-	# Fallback if Inspector assignment was missed
-	if not item_scene:
-		item_scene = load("res://scenes/components/items/item.tscn")
+	item_scene = load("res://scenes/components/items/item.tscn")
 
 func process_event(identifier: String) -> void:
 	# Normalize to lowercase to match registry keys (e.g. "Banana" -> "banana")
@@ -147,6 +142,6 @@ func _draw() -> void:
 	var h := grid_height * tile_size
 	draw_rect(Rect2(0, 0, w, h), Color(0, 0, 0, 0.125))
 	for x in range(grid_width + 1):
-		draw_line(Vector2(x * tile_size, 0), Vector2(x * tile_size, h), Color.WHITE)
+		draw_line(Vector2(x * tile_size, 0), Vector2(x * tile_size, h),  Color(0.75, 0.6, 0.4, 0.5))
 	for y in range(grid_height + 1):
-		draw_line(Vector2(0, y * tile_size), Vector2(w, y * tile_size), Color.WHITE)
+		draw_line(Vector2(0, y * tile_size), Vector2(w, y * tile_size),  Color(0.75, 0.6, 0.4, 0.5))

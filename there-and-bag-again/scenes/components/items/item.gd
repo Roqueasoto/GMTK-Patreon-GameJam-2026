@@ -2,7 +2,7 @@
 class_name ItemTool
 extends Node2D
 
-const TILE_SIZE := 100.0
+var TILE_SIZE = Utils.TILE_SIZE
 
 @export var data: ItemData:
 	set(value):

@@ -13,6 +13,7 @@ var TILE_SIZE = Utils.TILE_SIZE
 var is_in_use: bool = false 
 var target_position: Vector2 = Vector2.ZERO 
 var grab_offset: Vector2 = Vector2.ZERO
+var current_lifetime: float = 0.0
 
 @export var sprite: Sprite2D
 @export var data: ItemData:
@@ -25,17 +26,22 @@ var cells: Array[Vector2i]:
 	get: return data.cells if data else [] as Array[Vector2i]
 
 func _ready() -> void:
-	if data: _apply_data()
+	if data: 
+		_apply_data()
+		current_lifetime = data.lifetime
 
 func update_target_position():
 	var desired_pos = get_global_mouse_position() + grab_offset
 	target_position += (desired_pos - target_position) / 2.0
 
 func _input_event(_viewport, event, _shape_idx):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		grab_offset = global_position - get_global_mouse_position()
-		target_position = global_position
-		clicked.emit(self)
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			grab_offset = global_position - get_global_mouse_position()
+			target_position = global_position
+			clicked.emit(self)
+		elif event.button_index == MOUSE_BUTTON_RIGHT:
+			queue_free()
 
 func _apply_data() -> void:
 	queue_redraw()

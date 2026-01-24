@@ -86,6 +86,25 @@ func place_item(item: Item, grid_pos: Vector2i) -> void:
 	for cell in item.cells:
 		grid_data[grid_pos + cell] = item
 
+func remove_item(item: Item) -> void:
+	var origin = Vector2i(item.position / tile_size)
+	for cell in item.cells:
+		if grid_data.has(origin + cell) and grid_data[origin + cell] == item:
+			grid_data.erase(origin + cell)
+	item.queue_free()
+
+func process_item_lifetimes() -> void:
+	var items_to_remove = []
+	for child in get_children():
+		if child is Item:
+			if child.is_in_use:
+				child.current_lifetime -= 1
+				if child.current_lifetime <= 0:
+					items_to_remove.append(child)
+	
+	for item in items_to_remove:
+		remove_item(item)
+
 # Input Handling
 func _input(event: InputEvent) -> void:
 	var local_mouse = get_local_mouse_position()

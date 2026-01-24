@@ -20,6 +20,10 @@ func _on_timer_timeout() -> void:
 		_update_counters()
 	_move_events()
 
+	var board = get_tree().get_first_node_in_group("Board")
+	if board:
+		board.process_item_lifetimes()
+
 func _move_events() -> void:
 	if not should_move_events_back:
 		get_tree().call_group("Game Events", "move_self_forward")

@@ -33,12 +33,12 @@ func _update_visuals() -> void:
 	# Calculate scaling to fit texture within grid cells
 	var max_grid_cells := maxf(data.grid_size.x, data.grid_size.y)
 	var max_tex_size := maxf(data.texture.get_width(), data.texture.get_height())
-	var scale_factor := (max_grid_cells * TILE_SIZE) / max_tex_size
+	var scale_factor = (max_grid_cells * TILE_SIZE) / max_tex_size
 	
 	scale = Vector2(scale_factor, scale_factor)
 	
 	# Center the sprite visually within the grid bounds
-	var total_grid_px := Vector2(data.grid_size) * (TILE_SIZE / scale_factor)
+	var total_grid_px = Vector2(data.grid_size) * (TILE_SIZE / scale_factor)
 	sprite.offset = (total_grid_px - data.texture.get_size()) / 2.0
 	
 	queue_redraw()

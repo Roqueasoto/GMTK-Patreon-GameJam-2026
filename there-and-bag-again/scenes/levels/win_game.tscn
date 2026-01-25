@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjpghpmdx51x4"]
+[gd_scene load_steps=4 format=3 uid="uid://b6vmc2hmha8x2"]
 
-[ext_resource type="Texture2D" uid="uid://bs6eq4wr5uqpi" path="res://assets/art/gameoverscreenart.png" id="1_lpwf7"]
-[ext_resource type="Script" uid="uid://btwki3dn333ld" path="res://scripts/components/quit_game.gd" id="2_org1n"]
-[ext_resource type="Script" uid="uid://dk667kr8loag6" path="res://scripts/components/start_game.gd" id="2_qy7gw"]
+[ext_resource type="Texture2D" uid="uid://d3u6v7kgf1ctj" path="res://assets/art/youwinscreenart.png" id="1_0iqav"]
+[ext_resource type="Script" uid="uid://btwki3dn333ld" path="res://scripts/components/quit_game.gd" id="2_1cp4a"]
+[ext_resource type="Script" uid="uid://fwjh7emv6opc" path="res://scripts/components/launch_tutorial.gd" id="2_5o2ld"]
 
-[node name="GameOver" type="Control"]
+[node name="WinGameScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,41 +12,41 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_lpwf7")
+texture = ExtResource("1_0iqav")
 
 [node name="StartGame" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3
-anchor_top = 0.5
+anchor_top = 0.1
 anchor_right = 0.45
-anchor_bottom = 0.6
+anchor_bottom = 0.2
 offset_right = 8.0
 offset_bottom = 8.0
 theme_override_font_sizes/font_size = 40
 text = "Start Again?"
-script = ExtResource("2_qy7gw")
+script = ExtResource("2_5o2ld")
 
 [node name="QuitGame" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.65
-anchor_bottom = 0.6
+anchor_left = 0.575
+anchor_top = 0.1
+anchor_right = 0.725
+anchor_bottom = 0.2
 offset_right = 8.0
 offset_bottom = 8.0
 theme_override_font_sizes/font_size = 40
 text = "Quit Game
 "
-script = ExtResource("2_org1n")
+script = ExtResource("2_1cp4a")
 
 [connection signal="pressed" from="StartGame" to="StartGame" method="_on_pressed"]
 [connection signal="pressed" from="QuitGame" to="QuitGame" method="_on_pressed"]

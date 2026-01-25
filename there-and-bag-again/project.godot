@@ -24,7 +24,7 @@ resources_spreadsheet_view/freeze_first_column=true
 [application]
 
 config/name="There-And-Bag-Again"
-run/main_scene="uid://dx2klpgdf7ied"
+run/main_scene="uid://be6hksli3iw8x"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://assets/art/icon.svg"
 
@@ -50,6 +50,7 @@ enabled=PackedStringArray("res://addons/godot_resource_groups/plugin.cfg", "res:
 
 "Game Events"=""
 Player=""
+"Game Manager"=""
 
 [godot_resource_groups]
 

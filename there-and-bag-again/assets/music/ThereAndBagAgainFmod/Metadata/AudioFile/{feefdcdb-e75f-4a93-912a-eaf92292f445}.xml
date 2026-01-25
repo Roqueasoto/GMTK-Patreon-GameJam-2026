@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{feefdcdb-e75f-4a93-912a-eaf92292f445}">
+		<property name="assetPath">
+			<value>Sound Effects/ouch1.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5412244897959184</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{783e1ace-1010-48b9-b669-245042035e32}</destination>
+		</relationship>
+	</object>
+</objects>

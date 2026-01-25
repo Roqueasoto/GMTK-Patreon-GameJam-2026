@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cew6315kkjjle"
+path="res://.godot/imported/music_110bpm.mp3-a0921df4e3359f53831f8209053d071f.mp3str"
+
+[deps]
+
+source_file="res://assets/music/ThereAndBagAgainFmod/Assets/Background Music/music_110bpm.mp3"
+dest_files=["res://.godot/imported/music_110bpm.mp3-a0921df4e3359f53831f8209053d071f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

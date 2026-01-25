@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpkwm0lt726d3"
+path="res://.godot/imported/gameover_music.mp3-b8eac6848564e74511b39268672e173b.mp3str"
+
+[deps]
+
+source_file="res://assets/music/ThereAndBagAgainFmod/Assets/Background Music/gameover_music.mp3"
+dest_files=["res://.godot/imported/gameover_music.mp3-b8eac6848564e74511b39268672e173b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e4d1f3c3-4fe6-4c93-ab18-775f1c7e419b}">
+		<property name="assetPath">
+			<value>Background Music/gameover_music.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>55.039999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{783e1ace-1010-48b9-b669-245042035e32}</destination>
+		</relationship>
+	</object>
+</objects>

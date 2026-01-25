@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://digvgldikyndw"
+path="res://.godot/imported/winscreen_music.mp3-24ff87853949da314fb9017d771a486b.mp3str"
+
+[deps]
+
+source_file="res://assets/music/ThereAndBagAgainFmod/Assets/Background Music/winscreen_music.mp3"
+dest_files=["res://.godot/imported/winscreen_music.mp3-24ff87853949da314fb9017d771a486b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

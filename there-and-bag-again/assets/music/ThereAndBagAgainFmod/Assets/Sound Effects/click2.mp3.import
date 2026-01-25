@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bggsi1vne0oct"
+path="res://.godot/imported/click2.mp3-a0d60546437aa72a1c86a6a3870cdb98.mp3str"
+
+[deps]
+
+source_file="res://assets/music/ThereAndBagAgainFmod/Assets/Sound Effects/click2.mp3"
+dest_files=["res://.godot/imported/click2.mp3-a0d60546437aa72a1c86a6a3870cdb98.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

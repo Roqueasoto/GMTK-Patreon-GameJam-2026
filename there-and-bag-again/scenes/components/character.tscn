@@ -69,6 +69,7 @@ value = 100.0
 script = ExtResource("8_u2aqm")
 
 [node name="HealthBar" parent="." groups=["Health"] instance=ExtResource("9_ajkhv")]
+value = 90.0
 
 [connection signal="bar_is_empty" from="StaminaBar" to="." method="_on_stamina_bar_bar_is_empty"]
 [connection signal="bar_is_empty" from="HealthBar" to="." method="_on_health_bar_bar_is_empty"]

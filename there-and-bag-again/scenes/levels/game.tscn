@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://be6hksli3iw8x"]
+[gd_scene load_steps=3 format=3 uid="uid://be6hksli3iw8x"]
 
-[node name="Game" type="Node"]
+[ext_resource type="Script" uid="uid://dd05arnhlrl4q" path="res://scenes/levels/game_manager.gd" id="1_eqihu"]
+[ext_resource type="PackedScene" uid="uid://bcp6qcg3ywy4v" path="res://scenes/levels/splash_screen.tscn" id="2_61jgc"]
+
+[node name="Game" type="Node" groups=["Game Manager"]]
+script = ExtResource("1_eqihu")
+
+[node name="SplashScreen" parent="." instance=ExtResource("2_61jgc")]

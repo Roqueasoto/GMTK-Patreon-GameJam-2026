@@ -29,7 +29,7 @@ resources_spreadsheet_view/freeze_first_column=true
 
 config/name="There-And-Bag-Again"
 run/main_scene="uid://be6hksli3iw8x"
-config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://assets/art/icon.svg"
 
 [autoload]

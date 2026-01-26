@@ -4,9 +4,8 @@ extends Area2D
 signal clicked(item)
 signal used(item)
 signal unused(item)
-
-
-
+signal mouse_entered_item(item)
+signal mouse_exited_item(item)
 
 # State
 var TILE_SIZE = Utils.TILE_SIZE
@@ -29,6 +28,14 @@ func _ready() -> void:
 	if data: 
 		_apply_data()
 		current_lifetime = data.lifetime
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
+
+func _on_mouse_entered():
+	mouse_entered_item.emit(self)
+
+func _on_mouse_exited():
+	mouse_exited_item.emit(self)
 
 func update_target_position():
 	var desired_pos = get_global_mouse_position() + grab_offset

@@ -19,6 +19,7 @@ var item_registry: Dictionary = {}
 var grid_data := {} 
 var selected_item: Item = null
 var active_items: Array = []
+var item_tooltip: PanelContainer
 
 func get_total_of_active_item_properties() -> Dictionary:
 	var totals = {
@@ -71,6 +72,9 @@ func _enter_tree() -> void:
 
 func _ready() -> void:
 	item_scene = load("res://scenes/components/items/item.tscn")
+	item_tooltip = preload("res://scenes/components/item_tooltip.tscn").instantiate()
+	item_tooltip.visible = false
+	add_child(item_tooltip)
 
 # Public Event Handling
 func process_event(identifier: String) -> void:
@@ -81,6 +85,8 @@ func process_event(identifier: String) -> void:
 	item.data = item_registry[id_lower]
 	item.used.connect(_on_item_used)
 	item.unused.connect(_on_item_unused)
+	item.mouse_entered_item.connect(_on_item_mouse_entered)
+	item.mouse_exited_item.connect(_on_item_mouse_exited)
 	
 	if _try_spawn_in_area(item) or _try_auto_place(item):
 		queue_redraw()
@@ -99,6 +105,14 @@ func _on_item_unused(item: Item) -> void:
 	item.is_in_use = false
 	if active_items.has(item):
 		active_items.erase(item)
+
+func _on_item_mouse_entered(item: Item):
+	if selected_item: return
+	item_tooltip.update_data(item.data)
+	item_tooltip.visible = true
+
+func _on_item_mouse_exited(_item: Item):
+	item_tooltip.visible = false
 
 # Placement Logic
 func _try_spawn_in_area(item: Item) -> bool:
@@ -173,6 +187,7 @@ func _input(event: InputEvent) -> void:
 		_handle_drag(local_mouse)
 
 func _attempt_grab(local_mouse: Vector2) -> void:
+	item_tooltip.visible = false
 	var cell = Vector2i((local_mouse / tile_size).floor())
 	if not grid_data.has(cell): return
 

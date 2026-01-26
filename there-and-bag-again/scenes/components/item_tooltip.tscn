@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c6x0jq4b3s8wu"]
 
-[ext_resource type="Script" path="res://scripts/components/item_tooltip.gd" id="1_w8wjc"]
+[ext_resource type="Script" uid="uid://bgeec5m2ys6tg" path="res://scripts/components/item_tooltip.gd" id="1_w8wjc"]
 
 [node name="ItemTooltip" type="PanelContainer"]
 top_level = true

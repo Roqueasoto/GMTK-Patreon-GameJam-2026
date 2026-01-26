@@ -25,6 +25,7 @@ var cells: Array[Vector2i]:
 	get: return data.cells if data else [] as Array[Vector2i]
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	if data: 
 		_apply_data()
 		current_lifetime = data.lifetime
@@ -43,6 +44,8 @@ func update_target_position():
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
+		if get_tree().paused:
+			return
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			grab_offset = global_position - get_global_mouse_position()
 			target_position = global_position

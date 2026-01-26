@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://8hx5ow0lqhgh"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_ped0q"]
+[ext_resource type="Texture2D" uid="uid://c67tbktt26gpf" path="res://assets/items/new_silverbar.png" id="2_tyeei"]
+
+[resource]
+script = ExtResource("1_ped0q")
+id = "silverbar"
+texture = ExtResource("2_tyeei")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

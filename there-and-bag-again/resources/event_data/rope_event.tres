@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://iw8o62pmp8ov"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_mhsl6"]
+[ext_resource type="Texture2D" uid="uid://cvjcvfykm5b8b" path="res://assets/items/rope.png" id="2_t4ufa"]
+
+[resource]
+script = ExtResource("1_mhsl6")
+id = "rope"
+texture = ExtResource("2_t4ufa")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://ctic3wc5d0dgw"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_3o112"]
+[ext_resource type="Texture2D" uid="uid://c7p425p8fw63m" path="res://assets/items/mango.png" id="2_pllef"]
+
+[resource]
+script = ExtResource("1_3o112")
+id = "mango"
+texture = ExtResource("2_pllef")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

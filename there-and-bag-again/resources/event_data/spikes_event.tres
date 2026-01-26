@@ -8,5 +8,5 @@ script = ExtResource("1_6ak4k")
 id = "spikes"
 texture = ExtResource("2_d4qce")
 type = 1
-damage = 25.0
+damage = 50.0
 metadata/_custom_type_script = "uid://df03fvm34anpa"

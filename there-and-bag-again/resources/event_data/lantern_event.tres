@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://vf03juouumhb"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_4sh3w"]
+[ext_resource type="Texture2D" uid="uid://b3h5w6oxmyrlm" path="res://assets/items/lantern.png" id="2_htid2"]
+
+[resource]
+script = ExtResource("1_4sh3w")
+id = "lantern"
+texture = ExtResource("2_htid2")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

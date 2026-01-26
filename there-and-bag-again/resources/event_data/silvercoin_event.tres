@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://k5er1ug8p1jw"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_p8cdp"]
+[ext_resource type="Texture2D" uid="uid://ckdo425xtj2tq" path="res://assets/items/silvercoin.png" id="2_qubxv"]
+
+[resource]
+script = ExtResource("1_p8cdp")
+id = "silvercoin"
+texture = ExtResource("2_qubxv")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

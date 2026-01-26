@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://bb6gofad6tx4t"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_yummg"]
+[ext_resource type="Texture2D" uid="uid://d2pl1y20bw6f8" path="res://assets/obstacles/dragonfly.png" id="2_60g2u"]
+
+[resource]
+script = ExtResource("1_yummg")
+id = "dragonfly"
+texture = ExtResource("2_60g2u")
+type = 2
+damage = 20.0
+hp = 15.0
+metadata/_custom_type_script = "uid://df03fvm34anpa"

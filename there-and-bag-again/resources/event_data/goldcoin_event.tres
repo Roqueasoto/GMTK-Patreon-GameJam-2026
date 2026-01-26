@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://fca255rb04bp"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_in360"]
+[ext_resource type="Texture2D" uid="uid://xk71ykekt80v" path="res://assets/items/goldcoin.png" id="2_kwdw1"]
+
+[resource]
+script = ExtResource("1_in360")
+id = "goldcoin"
+texture = ExtResource("2_kwdw1")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

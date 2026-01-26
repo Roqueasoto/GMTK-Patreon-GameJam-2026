@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://djecgjoptcv2o"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_q4afo"]
+[ext_resource type="Texture2D" uid="uid://nxy7d13lx6m4" path="res://assets/items/monacle.png" id="2_qgeki"]
+
+[resource]
+script = ExtResource("1_q4afo")
+id = "monocle"
+texture = ExtResource("2_qgeki")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

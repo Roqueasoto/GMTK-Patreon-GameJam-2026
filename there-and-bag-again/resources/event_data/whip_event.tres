@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=3 format=3 uid="uid://bjja0xcfd0lb2"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_3dqau"]
+[ext_resource type="Texture2D" uid="uid://bwspmng7lbgsh" path="res://assets/items/whip.png" id="2_vduj8"]
+
+[resource]
+script = ExtResource("1_3dqau")
+id = "whip"
+texture = ExtResource("2_vduj8")
+metadata/_custom_type_script = "uid://df03fvm34anpa"

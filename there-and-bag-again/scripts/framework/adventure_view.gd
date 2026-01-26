@@ -10,6 +10,5 @@ func _ready():
 func _on_timer_timeout():
 	if board:
 		var totals = board.get_total_of_active_item_properties()
-		if character:
+		if character and totals.healing > 0 :
 			character.update_health(totals.healing)
-		print(totals)

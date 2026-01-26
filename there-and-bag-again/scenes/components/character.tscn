@@ -43,8 +43,9 @@ height = 412.364
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngqvs"]
 bg_color = Color(0.9149625, 0.58777595, 0.25800782, 1)
 
-[node name="Character" type="Node2D" groups=["Player"]]
+[node name="Character" type="Node2D" node_paths=PackedStringArray("sfx") groups=["Player"]]
 script = ExtResource("1_c8i2n")
+sfx = NodePath("CharacterSFX")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.636978, 0.63697803)
@@ -69,7 +70,10 @@ value = 100.0
 script = ExtResource("8_u2aqm")
 
 [node name="HealthBar" parent="." groups=["Health"] instance=ExtResource("9_ajkhv")]
-value = 90.0
+
+[node name="CharacterSFX" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/OuchSFX"
+event_guid = "{90fb59e3-5f39-495a-965b-93dd7bb067c3}"
 
 [connection signal="bar_is_empty" from="StaminaBar" to="." method="_on_stamina_bar_bar_is_empty"]
 [connection signal="bar_is_empty" from="HealthBar" to="." method="_on_health_bar_bar_is_empty"]

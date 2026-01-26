@@ -1,6 +1,9 @@
 class_name Board
 extends Node2D
 
+@export var thud_sfx: FmodEventEmitter2D
+@export var slide_sfx: FmodEventEmitter2D
+
 # Constants and Configuration
 var tile_size := Utils.TILE_SIZE
 var grid_width := Utils.GRID_RESOLUTION
@@ -16,11 +19,6 @@ var item_registry: Dictionary = {}
 var grid_data := {} 
 var selected_item: Item = null
 var active_items: Array = []
-
-# Audio
-@onready var audio_player := AudioStreamPlayer.new()
-var sfx_pickup = preload("res://assets/sound/click1.mp3")
-var sfx_putdown = preload("res://assets/sound/click2.mp3")
 
 func get_total_of_active_item_properties() -> Dictionary:
 	var totals = {
@@ -72,8 +70,6 @@ func _enter_tree() -> void:
 	add_to_group("Event Ocurred") 
 
 func _ready() -> void:
-	audio_player.volume_db = -6.0
-	add_child(audio_player)
 	item_scene = load("res://scenes/components/items/item.tscn")
 
 # Public Event Handling
@@ -108,7 +104,9 @@ func _on_item_unused(item: Item) -> void:
 func _try_spawn_in_area(item: Item) -> bool:
 	for y in range(-spawn_height, 0):
 		for x in range(spawn_x_offset, spawn_x_offset + spawn_width):
-			if _attempt_placement(item, Vector2i(x, y)): return true
+			if _attempt_placement(item, Vector2i(x, y)): 
+				
+				return true
 	return false
 
 func _try_auto_place(item: Item) -> bool:
@@ -131,6 +129,7 @@ func _can_place_at(item: Item, origin: Vector2i) -> bool:
 
 func place_item(item: Item, grid_pos: Vector2i) -> void:
 	if item.get_parent() != self:
+		thud_sfx.play_one_shot()
 		add_child(item)
 	
 	item.position = Vector2(grid_pos) * tile_size
@@ -167,7 +166,7 @@ func _input(event: InputEvent) -> void:
 			_attempt_grab(local_mouse)
 		elif selected_item:
 			_check_drop_zone()
-			_play_sfx(sfx_putdown)
+			slide_sfx.play_one_shot()
 			selected_item = null
 	
 	elif event is InputEventMouseMotion and selected_item:
@@ -183,7 +182,7 @@ func _attempt_grab(local_mouse: Vector2) -> void:
 	if selected_item.is_in_use and _is_in_spawn_zone(cell):
 		selected_item.unused.emit(selected_item)
 		
-	_play_sfx(sfx_pickup)
+	slide_sfx.play_one_shot()
 	get_viewport().set_input_as_handled()
 
 func _handle_drag(local_mouse: Vector2) -> void:
@@ -223,10 +222,6 @@ func _is_cell_valid(pos: Vector2i) -> bool:
 func _is_in_spawn_zone(pos: Vector2i) -> bool:
 	return pos.x >= spawn_x_offset and pos.x < (spawn_x_offset + spawn_width) \
 		and pos.y >= -spawn_height and pos.y < 0
-
-func _play_sfx(stream: AudioStream) -> void:
-	audio_player.stream = stream
-	audio_player.play()
 
 func _draw() -> void:
 	var line_color := Color(0.75, 0.6, 0.4, 0.5)

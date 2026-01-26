@@ -8,6 +8,10 @@
 
 config_version=5
 
+[Fmod]
+
+General/banks_path="res://assets/music/ThereAndBagAgainFmod/Build/Banks"
+
 [addons]
 
 resources_spreadsheet_view/array_color_tint=100.0
@@ -32,6 +36,7 @@ config/icon="res://assets/art/icon.svg"
 
 Utils="*res://scripts/globals/utils.gd"
 EventManager="*res://scripts/globals/event_manager.gd"
+FmodManager="*res://addons/fmod/FmodManager.gd"
 
 [display]
 
@@ -44,7 +49,7 @@ project/assembly_name="There-And-Bag-Again"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_resource_groups/plugin.cfg", "res://addons/gridplugin/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
+enabled=PackedStringArray("res://addons/fmod/plugin.cfg", "res://addons/godot_resource_groups/plugin.cfg", "res://addons/gridplugin/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
 
 [global_group]
 

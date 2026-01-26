@@ -1,4 +1,4 @@
 extends Button
 
 func _on_pressed() -> void:
-	get_tree().call_group("Game Manager", "load_splash_screen")
+	get_tree().call_group("Game Manager", "load_tutorial")

@@ -3,7 +3,13 @@
 [ext_resource type="Script" uid="uid://dd05arnhlrl4q" path="res://scenes/levels/game_manager.gd" id="1_eqihu"]
 [ext_resource type="PackedScene" uid="uid://bcp6qcg3ywy4v" path="res://scenes/levels/splash_screen.tscn" id="2_61jgc"]
 
-[node name="Game" type="Node" groups=["Game Manager"]]
+[node name="Game" type="Node" node_paths=PackedStringArray("music_player") groups=["Game Manager"]]
 script = ExtResource("1_eqihu")
+music_player = NodePath("MusicPlayer")
 
 [node name="SplashScreen" parent="." instance=ExtResource("2_61jgc")]
+
+[node name="MusicPlayer" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/StartScreenMusic"
+event_guid = "{588cba52-0e4f-4ad9-b3f4-863238148978}"
+autoplay = true

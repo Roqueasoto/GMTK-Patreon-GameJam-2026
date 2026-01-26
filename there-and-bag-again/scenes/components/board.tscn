@@ -2,5 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dpax0ar43cnrg" path="res://scripts/components/board.gd" id="1_jn47o"]
 
-[node name="Board" type="Node2D"]
+[node name="Board" type="Node2D" node_paths=PackedStringArray("thud_sfx", "slide_sfx")]
 script = ExtResource("1_jn47o")
+thud_sfx = NodePath("ThunkSFX")
+slide_sfx = NodePath("SlideSFX")
+
+[node name="ThunkSFX" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/ThudSFX"
+event_guid = "{02ac11db-604b-42cd-a346-6d9e6f879d7a}"
+
+[node name="SlideSFX" type="FmodEventEmitter2D" parent="."]
+event_name = "event:/SlidingSFX"
+event_guid = "{4da939a8-e136-4d7d-bac9-ebb2e57c2075}"

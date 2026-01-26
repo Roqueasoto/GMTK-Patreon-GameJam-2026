@@ -1,6 +1,7 @@
 class_name Character
 extends Node2D
 
+@export var sfx: FmodEventEmitter2D
 @export var player_displacement = 6.0
 @export var stamina_drain = -5  # Negative implies stamina drain per tick
 @export var player_damage = 5   # barehanded, modified by items
@@ -14,6 +15,7 @@ func _move_player() -> void:
 	position.x += player_displacement
 
 func update_health(delta: float) -> void:
+	print("delta %s" % -delta)
 	get_tree().call_group("Health", "update", delta)
 
 func update_stamina(delta: float) -> void:
@@ -26,15 +28,13 @@ func _on_timer_timeout() -> void:
 		active_totals = board.get_total_of_active_item_properties()
 		all_totals = board.get_total_of_all_item_properties()
 	
-	# Drain first
-	update_stamina(stamina_drain - all_totals.weight)
-	# Then regenerate
-	update_stamina(active_totals.stamina)
+	update_stamina(stamina_drain - all_totals.weight + active_totals.stamina)
 
 # This function is called when stamina damage is taken and it would reduce
 # remaining stamina below 0. Take an equal amount of Health Damage.
 func _on_stamina_bar_bar_is_empty(delta: float) -> void:
-	update_health(delta)
+	print("empty_bar")
+	update_health(delta*2)
 
 func _on_health_bar_bar_is_empty(_delta: float) -> void:
 	print("Game Over")
@@ -47,6 +47,8 @@ func take_damage(amount: float):
 	var actual_damage = amount - totals.defence
 	if actual_damage < 0:
 		actual_damage = 0
+	else: # make some noise
+		sfx.play_one_shot()
 	update_health(-actual_damage)
 
 func get_player_damage() -> float:

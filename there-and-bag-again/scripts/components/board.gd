@@ -15,11 +15,58 @@ var item_scene: PackedScene
 var item_registry: Dictionary = {} 
 var grid_data := {} 
 var selected_item: Item = null
+var active_items: Array = []
 
 # Audio
 @onready var audio_player := AudioStreamPlayer.new()
 var sfx_pickup = preload("res://assets/sound/click1.mp3")
 var sfx_putdown = preload("res://assets/sound/click2.mp3")
+
+func get_total_of_active_item_properties() -> Dictionary:
+	var totals = {
+		"healing": 0.0,
+		"stamina": 0.0,
+		"damage_increase": 0.0,
+		"defence": 0.0,
+		"score": 0.0,
+		"weight": 0.0,
+	}
+	for item in active_items:
+		if item.data:
+			totals["healing"] += item.data.healing
+			totals["stamina"] += item.data.stamina
+			totals["damage_increase"] += item.data.damage_increase
+			totals["defence"] += item.data.defence
+			totals["score"] += item.data.score
+			totals["weight"] += item.data.weight
+	return totals
+
+func get_all_items() -> Array:
+	var items = []
+	for child in get_children():
+		if child is Item:
+			items.append(child)
+	return items
+
+func get_total_of_all_item_properties() -> Dictionary:
+	var totals = {
+		"healing": 0.0,
+		"stamina": 0.0,
+		"damage_increase": 0.0,
+		"defence": 0.0,
+		"score": 0.0,
+		"weight": 0.0,
+	}
+	var all_items = get_all_items()
+	for item in all_items:
+		if item.data:
+			totals["healing"] += item.data.healing
+			totals["stamina"] += item.data.stamina
+			totals["damage_increase"] += item.data.damage_increase
+			totals["defence"] += item.data.defence
+			totals["score"] += item.data.score
+			totals["weight"] += item.data.weight
+	return totals
 
 func _enter_tree() -> void:
 	add_to_group("Event Ocurred") 
@@ -48,10 +95,14 @@ func process_event(identifier: String) -> void:
 func _on_item_used(item: Item) -> void:
 	print("Board: Item '%s' triggered via spawn area drop!" % item.data.id)
 	item.is_in_use = true
+	if not active_items.has(item):
+		active_items.append(item)
 
 func _on_item_unused(item: Item) -> void:
 	print("Board: Item '%s' is no longer in use (picked up)!" % item.data.id)
 	item.is_in_use = false
+	if active_items.has(item):
+		active_items.erase(item)
 
 # Placement Logic
 func _try_spawn_in_area(item: Item) -> bool:
@@ -87,6 +138,8 @@ func place_item(item: Item, grid_pos: Vector2i) -> void:
 		grid_data[grid_pos + cell] = item
 
 func remove_item(item: Item) -> void:
+	if active_items.has(item):
+		active_items.erase(item)
 	var origin = Vector2i(item.position / tile_size)
 	for cell in item.cells:
 		if grid_data.has(origin + cell) and grid_data[origin + cell] == item:

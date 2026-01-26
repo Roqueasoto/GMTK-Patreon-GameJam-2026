@@ -11,3 +11,5 @@ extends Resource
 @export var damage_increase:float = 0
 @export var defence:float = 0
 @export var lifetime:float = 4
+@export var weight:float = 0
+@export var score:float = 0

@@ -26,11 +26,31 @@ func load_main_game() -> void:
 	_load_new_scene(scene)
 
 func load_game_over() -> void:
+	var board = current_scene.get_node("CanvasLayer/Bag/Board")
+	var health_bar = current_scene.get_node("AdventureView/Character/HealthBar")
+	var score = 0
+	if board:
+		var totals = board.get_total_of_all_item_properties()
+		score = totals.score
+	if health_bar:
+		score += health_bar.value
+
 	var scene = GAME_OVER_SCENE.instantiate()
+	scene.score = score
 	_load_new_scene(scene)
 
 func load_game_won_screen() -> void:
+	var board = current_scene.get_node("CanvasLayer/Bag/Board")
+	var health_bar = current_scene.get_node("AdventureView/Character/HealthBar")
+	var score = 0
+	if board:
+		var totals = board.get_total_of_all_item_properties()
+		score = totals.score
+	if health_bar:
+		score += health_bar.value
+		
 	var scene = WIN_GAME_SCENE.instantiate()
+	scene.score = score
 	_load_new_scene(scene)
 
 func _load_new_scene(new_scene: Node) -> void:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://g6cpvkafq72i"]
 
 [ext_resource type="Texture2D" uid="uid://dlbcrjlesmc3q" path="res://assets/art/howtoplayscreen.png" id="1_ndfpj"]
-[ext_resource type="Script" uid="uid://cj07yc0lhdoyw" path="res://scripts/components/start_main_game.gd" id="2_t6iqo"]
+[ext_resource type="Script" path="res://scripts/components/start_main_game.gd" id="2_t6iqo"]
 
 [node name="TutorialScreen" type="Control"]
 layout_mode = 3

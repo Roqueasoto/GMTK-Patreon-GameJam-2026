@@ -52,10 +52,10 @@ func _on_area_2d_area_entered(_area: Area2D) -> void:
 			if hp <= 0:
 				event_should_expire.emit(self)
 			else:
-				player.update_health(-damage)
+				player.take_damage(damage)
 				event_continues.emit()
 		Utils.event_type.OBSTACLE:
-			player.update_health(-damage)
+			player.take_damage(damage)
 			event_should_expire.emit(self)
 		Utils.event_type.ITEM:
 			get_tree().call_group("Event Ocurred", "process_event", identifier)

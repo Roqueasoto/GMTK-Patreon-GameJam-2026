@@ -6,5 +6,5 @@
 script = ExtResource("1_ieppp")
 base_folder = "res://resources/levels"
 includes = Array[String](["*.tres"])
-paths = Array[String](["res://resources/levels/level_one_data.tres"])
+paths = Array[String](["res://resources/levels/level_one_data.tres", "res://resources/levels/level_zero_data.tres"])
 metadata/_custom_type_script = "uid://b0vi4h20walas"

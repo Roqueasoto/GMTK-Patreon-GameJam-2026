@@ -3,8 +3,9 @@ extends Node2D
 
 @export var sfx: FmodEventEmitter2D
 @export var player_displacement = 6.0
-@export var stamina_drain = -5  # Negative implies stamina drain per tick
-@export var player_damage = 5   # barehanded, modified by items
+@export var stamina_drain = -5     # Negative implies stamina drain per tick
+@export var player_damage = 5      # barehanded, modified by items
+@export var weight_modifier = 0.25 # Weight modifier to make weight less punishing
 
 @onready var board = get_tree().get_first_node_in_group("Board")
 
@@ -27,8 +28,8 @@ func _on_timer_timeout() -> void:
 	if board:
 		active_totals = board.get_total_of_active_item_properties()
 		all_totals = board.get_total_of_all_item_properties()
-	
-	update_stamina(stamina_drain - all_totals.weight + active_totals.stamina)
+	var weight_penalty = all_totals.weight * weight_modifier
+	update_stamina(stamina_drain - weight_penalty + active_totals.stamina)
 
 # This function is called when stamina damage is taken and it would reduce
 # remaining stamina below 0. Take an equal amount of Health Damage.

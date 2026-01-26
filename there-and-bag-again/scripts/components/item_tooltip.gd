@@ -21,5 +21,5 @@ func update_data(item_data: ItemData):
 	
 	stats_label.text = stats_text
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	global_position = get_global_mouse_position() + Vector2(10, 10)

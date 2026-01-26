@@ -9,4 +9,5 @@ id = "monocle"
 display_name = "Monocle"
 texture = ExtResource("2_bm466")
 grid_size = Vector2i(1, 1)
+defence = 2.0
 metadata/_custom_type_script = "uid://mt2yymrxspbd"

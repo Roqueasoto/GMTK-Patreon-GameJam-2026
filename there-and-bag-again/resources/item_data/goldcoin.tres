@@ -9,4 +9,5 @@ id = "goldcoin"
 display_name = "Gold Coin"
 texture = ExtResource("2_lwl3h")
 grid_size = Vector2i(1, 1)
+score = 5.0
 metadata/_custom_type_script = "uid://mt2yymrxspbd"

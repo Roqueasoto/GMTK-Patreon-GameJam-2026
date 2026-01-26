@@ -6,6 +6,7 @@ extends Node2D
 
 func _ready():
 	timer.timeout.connect(_on_timer_timeout)
+	EventManager.set_level(randi() % 10)
 
 func _on_timer_timeout():
 	if board:

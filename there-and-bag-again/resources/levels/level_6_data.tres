@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=19 format=3 uid="uid://bi1fuiivoqajw"]
+
+[ext_resource type="Script" uid="uid://df03fvm34anpa" path="res://scripts/components/data/event_data.gd" id="1_djy14"]
+[ext_resource type="Resource" uid="uid://82i0og8x8mf3" path="res://resources/event_data/banana_event.tres" id="2_73alp"]
+[ext_resource type="Script" uid="uid://b1hll4d88tv4b" path="res://scripts/components/data/level_data.gd" id="2_x26cb"]
+[ext_resource type="Resource" uid="uid://ctic3wc5d0dgw" path="res://resources/event_data/mango_event.tres" id="3_upt2c"]
+[ext_resource type="Resource" uid="uid://cdxkr4mcucbhe" path="res://resources/event_data/pineapple_event.tres" id="4_kcvs4"]
+[ext_resource type="Resource" uid="uid://2j6uo8bhvg08" path="res://resources/event_data/potionred_event.tres" id="5_hr5vv"]
+[ext_resource type="Resource" uid="uid://cn4n4wxuk2rcx" path="res://resources/event_data/mud_event.tres" id="6_kfnxi"]
+[ext_resource type="Resource" uid="uid://b2hx8jjsyvu6r" path="res://resources/event_data/canteen_event.tres" id="7_0v8gr"]
+[ext_resource type="Resource" uid="uid://7a4k3j85fk5m" path="res://resources/event_data/coconut_event.tres" id="8_11mgs"]
+[ext_resource type="Resource" uid="uid://cbum8fxvvn0yn" path="res://resources/event_data/goldbar_event.tres" id="9_7b3ix"]
+[ext_resource type="Resource" uid="uid://djecgjoptcv2o" path="res://resources/event_data/monocle_event.tres" id="10_s2k0h"]
+[ext_resource type="Resource" uid="uid://gva0uqqylroa" path="res://resources/event_data/pistol_event.tres" id="11_lbiab"]
+[ext_resource type="Resource" uid="uid://bb6gofad6tx4t" path="res://resources/event_data/dragonfly_event.tres" id="12_h8nmi"]
+[ext_resource type="Resource" uid="uid://bjja0xcfd0lb2" path="res://resources/event_data/whip_event.tres" id="13_rnyu4"]
+[ext_resource type="Resource" uid="uid://ck5ld3owq7wfl" path="res://resources/event_data/potionpurple_event.tres" id="14_61ux6"]
+[ext_resource type="Resource" uid="uid://d3r1t3f4obi0w" path="res://resources/event_data/potiongreen_event.tres" id="15_1gkhe"]
+[ext_resource type="Resource" uid="uid://d3dn3703sx0m4" path="res://resources/event_data/net_event.tres" id="16_0fq4n"]
+[ext_resource type="Resource" uid="uid://d6x1g3j7fl2t" path="res://resources/event_data/snake_event.tres" id="17_sghhr"]
+
+[resource]
+script = ExtResource("2_x26cb")
+id = 6
+event_list = Array[ExtResource("1_djy14")]([ExtResource("2_73alp"), ExtResource("3_upt2c"), ExtResource("4_kcvs4"), ExtResource("5_hr5vv"), ExtResource("6_kfnxi"), ExtResource("7_0v8gr"), ExtResource("8_11mgs"), ExtResource("9_7b3ix"), ExtResource("10_s2k0h"), ExtResource("11_lbiab"), ExtResource("12_h8nmi"), ExtResource("13_rnyu4"), ExtResource("7_0v8gr"), ExtResource("10_s2k0h"), ExtResource("14_61ux6"), ExtResource("15_1gkhe"), ExtResource("4_kcvs4"), ExtResource("6_kfnxi"), ExtResource("16_0fq4n"), ExtResource("17_sghhr")])
+metadata/_custom_type_script = "uid://b1hll4d88tv4b"

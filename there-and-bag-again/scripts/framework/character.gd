@@ -5,7 +5,7 @@ extends Node2D
 @export var player_displacement = 6.0
 @export var stamina_drain = -1     # Negative implies stamina drain per tick
 @export var player_damage = 5      # barehanded, modified by items
-@export var weight_modifier = 0.1 # Weight modifier to make weight less punishing
+@export var weight_modifier = 0.1  # Weight modifier to make weight less punishing
 
 @onready var board = get_tree().get_first_node_in_group("Board")
 

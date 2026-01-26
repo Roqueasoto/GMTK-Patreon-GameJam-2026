@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://g6cpvkafq72i"]
 
 [ext_resource type="Texture2D" uid="uid://dlbcrjlesmc3q" path="res://assets/art/howtoplayscreen.png" id="1_ndfpj"]
-[ext_resource type="Script" path="res://scripts/components/start_main_game.gd" id="2_t6iqo"]
+[ext_resource type="Script" uid="uid://cj07yc0lhdoyw" path="res://scripts/components/start_main_game.gd" id="2_t6iqo"]
 
 [node name="TutorialScreen" type="Control"]
 layout_mode = 3
@@ -33,5 +33,44 @@ theme_override_font_sizes/font_size = 40
 text = "Continue
 "
 script = ExtResource("2_t6iqo")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22
+anchor_top = 0.3
+anchor_right = 0.78
+anchor_bottom = 0.9
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Panel/MarginContainer"]
+custom_minimum_size = Vector2(200, 500)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Welcome to the jungle! 
+
+You are an explorer on a mission to recover lost treasures. You have only yourself, your courage, and your trusty bag.
+
+As you run, your Stamina  will deplete based on the weight of your bag. Without Stamina your Health will deplete instead, until you die.
+
+As you run through each level, you will encounter obstacles which make your journey more perilous and items which end up in your bag if there is space in the bag’s highlighted area. To use items, simply move them into said area after first moving them “into” your bag for storage.
+
+Good luck!"
+autowrap_mode = 3
 
 [connection signal="pressed" from="StartGame" to="StartGame" method="_on_pressed"]

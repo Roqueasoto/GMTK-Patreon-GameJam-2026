@@ -113,26 +113,29 @@
 	<object class="MixerBusFader" id="{bdbdfcd6-bdb4-4694-94b4-fa74b61f58e1}" />
 	<object class="MixerBusFader" id="{480d4651-ac80-476a-84fc-4e336220b976}" />
 	<object class="MultibandEqEffect" id="{410c96d9-ad3a-4096-8de1-b3164cdb07c9}">
+		<property name="filterTypeA">
+			<value>2</value>
+		</property>
 		<property name="filterTypeB">
 			<value>7</value>
 		</property>
 		<property name="frequencyA">
-			<value>705.863708</value>
+			<value>1830.78857</value>
 		</property>
 		<property name="frequencyB">
-			<value>116.379707</value>
+			<value>111.655685</value>
 		</property>
 		<property name="frequencyC">
 			<value>1068.27954</value>
 		</property>
 		<property name="qualityA">
-			<value>0.255202591</value>
+			<value>0.820470273</value>
 		</property>
 		<property name="qualityC">
 			<value>1.26874757</value>
 		</property>
 		<property name="gainB">
-			<value>-16.8038998</value>
+			<value>-30</value>
 		</property>
 	</object>
 	<object class="CompressorEffect" id="{16b09871-0b69-4729-b29f-6f203057939b}">
@@ -149,7 +152,7 @@
 			<value>280</value>
 		</property>
 		<property name="gain">
-			<value>10</value>
+			<value>30</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{b5b801e0-4d9f-496f-8eac-451e56048df5}">

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bc1e2p4f8y4yj"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bbg15eb4a0jnl"]
 
 [ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_5hiyp"]
 [ext_resource type="Texture2D" uid="uid://0jdvhos7uc12" path="res://assets/items/pineapple.png" id="2_5hiyp"]
@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_5hiyp")
 id = "pineapple"
-display_name = "pineapple"
+display_name = "Pineapple"
 texture = ExtResource("2_5hiyp")
 grid_size = Vector2i(3, 3)
 cells = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, 1), Vector2i(1, 1), Vector2i(1, 2), Vector2i(0, 2), Vector2i(2, 2), Vector2i(2, 1), Vector2i(2, 0), Vector2i(1, 0)])

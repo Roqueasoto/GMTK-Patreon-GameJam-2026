@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dnn5gvkp0dbd8"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://uf75i5m4aqhi"]
 
 [ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_bm466"]
 [ext_resource type="Texture2D" uid="uid://nxy7d13lx6m4" path="res://assets/items/monacle.png" id="2_bm466"]
 
 [resource]
 script = ExtResource("1_bm466")
-id = "canteen"
-display_name = "canteen"
+id = "monocle"
+display_name = "Monocle"
 texture = ExtResource("2_bm466")
 grid_size = Vector2i(1, 1)
 metadata/_custom_type_script = "uid://mt2yymrxspbd"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3 uid="uid://b1m6igs538ac7"]
+
+[ext_resource type="Script" uid="uid://b0vi4h20walas" path="res://addons/godot_resource_groups/resource_group.gd" id="1_law8d"]
+
+[resource]
+script = ExtResource("1_law8d")
+base_folder = "res://resources/item_data"
+includes = Array[String](["*.tres"])
+paths = Array[String](["res://resources/item_data/banana.tres", "res://resources/item_data/canteen.tres", "res://resources/item_data/coconut.tres", "res://resources/item_data/goldbar.tres", "res://resources/item_data/goldcoin.tres", "res://resources/item_data/lantern.tres", "res://resources/item_data/machete.tres", "res://resources/item_data/mango.tres", "res://resources/item_data/monacle.tres", "res://resources/item_data/net.tres", "res://resources/item_data/pineaple.tres", "res://resources/item_data/pistol.tres", "res://resources/item_data/potiongreen.tres", "res://resources/item_data/potionpurple.tres", "res://resources/item_data/potionred.tres", "res://resources/item_data/rope.tres", "res://resources/item_data/silverbar.tres", "res://resources/item_data/silvercoin.tres", "res://resources/item_data/spear.tres", "res://resources/item_data/whip.tres"])
+metadata/_custom_type_script = "uid://b0vi4h20walas"

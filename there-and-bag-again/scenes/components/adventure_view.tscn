@@ -32,6 +32,7 @@ repeat_times = 2
 [node name="SkyTexture" type="TextureRect" parent="Background/ParallaxSky"]
 scale = Vector2(0.40984854, 0.4098485)
 texture = ExtResource("3_iixse")
+stretch_mode = 4
 
 [node name="ParallaxFarCloud" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.15, 0.15)
@@ -173,15 +174,16 @@ custom_minimum_size = Vector2(1080, 0)
 offset_left = -3.0
 offset_top = 649.0
 offset_right = 2723.0
-offset_bottom = 1089.0
+offset_bottom = 1125.0
 color = Color(0.69109493, 0.5221515, 0.31634653, 1)
 
 [node name="Character" parent="." instance=ExtResource("17_vw1r8")]
 position = Vector2(1000, 875)
 
 [node name="Camera2D" type="Camera2D" parent="Character"]
-position = Vector2(-1006.375, -866.818)
+position = Vector2(-1001, -859)
 anchor_mode = 0
+editor_draw_limits = true
 
 [node name="Spawner" type="Node2D" parent="Character" node_paths=PackedStringArray("container", "player")]
 position = Vector2(775, 0)

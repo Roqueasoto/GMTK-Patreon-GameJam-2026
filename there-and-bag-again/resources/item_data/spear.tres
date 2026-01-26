@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c6w6bku7d61yi"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cnhw8sn7y7cll"]
 
 [ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_8dagm"]
 [ext_resource type="Texture2D" uid="uid://dlqoavuk0uxih" path="res://assets/items/spear.png" id="2_8dagm"]
 
 [resource]
 script = ExtResource("1_8dagm")
-id = "canteen"
-display_name = "canteen"
+id = "spear"
+display_name = "Spear"
 texture = ExtResource("2_8dagm")
+cells = Array[Vector2i]([Vector2i(0, 0), Vector2i(2, 2), Vector2i(2, 3)])
 metadata/_custom_type_script = "uid://mt2yymrxspbd"

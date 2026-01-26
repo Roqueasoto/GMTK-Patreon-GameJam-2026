@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://gunm4gskoubh"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c0qhssj85p0uv"]
 
 [ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_tnird"]
 [ext_resource type="Texture2D" uid="uid://d4apmrk5rekfk" path="res://assets/items/goldbar.png" id="2_tnird"]

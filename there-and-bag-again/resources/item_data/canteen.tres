@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bvgw46r23mntx"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://brhg3f0ebuffo"]
 
 [ext_resource type="Script" uid="uid://mt2yymrxspbd" path="res://scripts/components/data/item_data.gd" id="1_0krng"]
 [ext_resource type="Texture2D" uid="uid://df4k2rm4j41mu" path="res://assets/items/canteen.png" id="2_0krng"]
@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_0krng")
 id = "canteen"
-display_name = "canteen"
+display_name = "Canteen"
 texture = ExtResource("2_0krng")
 grid_size = Vector2i(3, 5)
 cells = Array[Vector2i]([Vector2i(0, 3), Vector2i(1, 4), Vector2i(0, 4), Vector2i(1, 3), Vector2i(2, 3), Vector2i(2, 4), Vector2i(1, 2), Vector2i(1, 1), Vector2i(2, 2), Vector2i(0, 2)])
